@@ -1,20 +1,11 @@
-const  {getUser} = require('./03 - CallBack/getUser')
+
+const {getPokemonById} = require ('./06 - promises/06-promises')
 
 
-getUser(3, function(error, user ) {
-
-    if (error) {
-       throw new Error(error)
-    }
-
-    console.log(user);
-    
-    
-
-    
-    
-
-})
+getPokemonById(1)
+.then(pokemon => console.log(pokemon))
+.catch(errorrr => console.log({errorrr}))
 
 
-// console.log(emailTemplate);
+
+
